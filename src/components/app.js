@@ -1,12 +1,8 @@
 import React from 'react';
-import './app.css';
+import Counter from './counter';
 
 const App = () => {
-  return (
-    <div className="app">
-      <h2>Redux SandBox!!!</h2>
-    </div>
-  );
+  return <Counter />
 }
 
 export default App;
