@@ -1,22 +1,8 @@
 import { createStore } from 'redux';
+import {inc, dec, rnd} from './actions';
+import reducer from './reducer';
 
-const reduser = (state = 0, action) => {
-  switch(action.type) {
-    case 'INC':
-      return state + 1
-    case 'DEC':
-      return state - 1
-    case 'RND':
-      return state + action.payload
-    default:
-      return state
-  }
-}
-const inc = () => ({type: 'INC'})
-const dec = () => ({type: 'DEC'})
-const rnd = (payload) => ({type: 'RND', payload})
-
-const store = createStore(reduser);
+const store = createStore(reducer);
 const update = () => {
   document
     .getElementById('counter')
